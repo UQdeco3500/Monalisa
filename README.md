@@ -1,5 +1,4 @@
 # Monalisa
-***
 ## Link To Project Proposal
 https://github.com/UQdeco3500/Monalisa/wiki#1-design-proposal
 
