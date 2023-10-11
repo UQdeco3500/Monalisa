@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMZ.PLACE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Nunito:wght@500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="page-room">
+    <!-- header -->
+    <header>
+        <nav>
+            <a href="1_home.html" class="nav__logo">
+                <img class="nav__logo-img" src="image/logo.png" alt="logo">
+             </a>
+             <div class="logo"> AMZ </div>
+
+            <input type="checkbox" id="click">
+            <label for="click" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+                <li><a class="for_home" href="1_home.html">Home</a></li>
+                <li><a class="for_intro" href="2_intro.html">Intro</a></li>
+                <li><a class="for_room active" href="3_room.html">Rooms</a></li>
+                <li><a class="for_events" href="4_event.html">Events</a></li>
+                <li><a class="for_dining" href="5_dining.html">Dining</a></li>
+                <li><a class="for_signin" href="6_signin.html"><label id="Signin_Label">SignIn</label></a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- header -->
+
+    <!-- main content -->
+    <main>
+        <!-- popup window -->
+        <div class="popup">
+            <button id="close">&times;</button>
+            <h2>Manual to use this wheel</h2>
+            <video id="VideoPlayer" src="video/Screen Recording 2022-10-03 at 3.42.13 pm.mp4" 
+                controls="true" autoplay="autoplay" loop="false" muted defaultmuted playsinline />
+        </div>
+        <!-- popup window -->
+
+        <!-- wheel -->
+        <div class="content">
+            <div class="container">
+                <div class="one"><a href="3-1_tentroom.html">Tent</a></div>
+                <div class="two"><a href="3-2_singleroom.html">Single</a></div>
+                <div class="three"><a href="3-3_twinroom.html">Twin</a></div>
+                <div class="four"><a href="3-4_doubleroom.html">Double</a></div>
+                <div class="five"><a href="3-5_dorm.html">Dorm</a></div>
+                <div class="six"><a href="3-6_palaceroom.html">Palace</a></div>
+            </div>
+    
+            <span class="mid"></span>
+    
+            <button id="spin">
+                <span>Click</span>
+            </button>
+    
+            <br>
+    
+            <p class="description">Refresh to see the manual again!</p>
+    
+            <div class="stoper"></div>
+        </div>
+        <!-- wheel -->
+    </main>
+    <!-- main content -->
+
+    <!-- footer -->
+    <footer class="footer__content">
+        <ul class="footer_text">
+            <h3 class="footer__title">AMZ Place</h3>
+            <li><a class="footer__link" onclick="alert('This Website Belongs to A.M.Z Place')">Copyright© A.M.Z</a></li>
+            <li><a class="footer__link" href="mailto: a.m.z@example.com">Email Us</a></li>
+            <li><a class="footer__link" href="tel:123-456-7890">Call Us</a></li>
+        </ul>
+    </footer>
+    <!-- footer -->
+
+    <script src="javascript/script.js"></script>
+</body>
+
+</html>

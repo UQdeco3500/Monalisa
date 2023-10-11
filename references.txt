@@ -1,0 +1,39 @@
+References (APA 7th imported from Endnote)
+videos
+(2022). [Video]. Retrieved 6 October 2022, from https://mixkit.co/free-stock-video/opening-a-hotel-room-door-21817/.
+(2022). [Video]. Retrieved 6 October 2022, from https://pixabay.com/videos/id-102852/.
+(2022). [Video]. Retrieved 6 October 2022, from https://mixkit.co/free-stock-video/a-family-checking-in-a-luxury-hotel-36736/.
+(2022). [Video]. Retrieved 6 October 2022, from https://pixabay.com/videos/tall-ship-boat-sail-dream-journey-42669/.
+
+photos and icons
+D, T. (2017). submarine [Image]. Retrieved 6 October 2022, from https://unsplash.com/s/photos/submarine.
+Dinç, A. (2018). full moon [Image]. Retrieved 6 October 2022, from https://unsplash.com/photos/LluELtL5mK4.
+Furman, P. (2016). King [Image]. Retrieved 6 October 2022, from https://unsplash.com/photos/jo21H-4lYFU.
+Hoang, L. (2015). Vacation [Image]. Retrieved 6 October 2022, from https://unsplash.com/photos/UoqAR2pOxMo.
+J. Rivas, H. (2019). Living room to spend a relaxed and quiet time [Image]. Retrieved 6 October 2022, from https://unsplash.com/photos/UWnxqUuAFm4.
+Jeanneau, G. (2019). grey battleship in dock [Image]. Retrieved 6 October 2022, from https://unsplash.com/photos/FIbcvdeNY84.
+Jolly, C. (2022). Double Bed Room [Image]. Retrieved 6 October 2022, from https://unsplash.com/photos/GqbU78bdJFM.
+Kallianpur, R. (2022). Single Bed Room [Image]. Retrieved 6 October 2022, from https://unsplash.com/photos/uocSnWMhnAs.
+Kosinska, J. (2017). Tea Relax [Image]. Retrieved 6 October 2022, from https://unsplash.com/photos/kKfVAvdBsAw.
+Lane, M. (2019). an empty hotel bedroom [Image]. Retrieved 6 October 2022, from https://unsplash.com/photos/iMnSqmT2RGE.
+Lincoln, D. (2018). Halloween [Image]. Retrieved 6 October 2022, from https://unsplash.com/photos/0nO88Q37cGo.
+Long, R. (2020). Hotel Diplomat, Strandvägen, Stockholm, Sweden [Image]. Retrieved 6 October 2022, from https://unsplash.com/photos/2P_ifaetDm0.
+Lopes, H. (2022). two men chatting [Image]. Retrieved 6 October 2022, from https://unsplash.com/photos/1m2LQEonm2A.
+Lumi, A. (2022). dancing [Image]. Retrieved 6 October 2022, from https://unsplash.com/photos/6Woj_wozqmA.
+Pham, D. (2018). People holding shoulders [Image]. Retrieved 6 October 2022, from https://unsplash.com/photos/Cecb0_8Hx-o.
+Ros, L. (2022). tent [Image]. Retrieved 6 October 2022, from https://unsplash.com/photos/MlCaPR4UTSw.
+Summer food icons. (2022). [Image]. Retrieved 6 October 2022, from https://www.flaticon.com/packs/summer-food-and-drink-12.
+Tandel, V. (2022). submarine [Image]. Retrieved 6 October 2022, from https://unsplash.com/photos/ypJ3VfxvF5M.
+Thanun, N. (2020). Brown wooden table with books [Image]. Retrieved 6 October 2022, from https://unsplash.com/photos/LMd7IfbnPsU.
+Veliz, R. (2018). DJ's [Image]. Retrieved 6 October 2022, from https://unsplash.com/photos/DGKJzOmjyS4.
+Vershinina, A. (2020). Christmas tree [Image]. Retrieved 6 October 2022, from https://unsplash.com/photos/F4erkqWZvQE.
+Vershinina, A. (2021). Another Christmas Tree [Image]. Retrieved 6 October 2022, from https://unsplash.com/photos/PXvoToEW5lM.
+W, J. (2017). Sea view [Image]. Retrieved 6 October 2022, from https://unsplash.com/photos/IQKuHc2lils.
+WEAVER, L. (2021). party [Image]. Retrieved 6 October 2022, from https://unsplash.com/photos/vJlaWLnGcb0.
+
+codes
+How to reload page only once in JavaScript ? (2021, March 10). GeeksforGeeks. https://www.geeksforgeeks.org/how-to-reload-page-only-once-in-javascript/
+Kaur, R. (2020, October 24). How to Store Login Sessions with LocalStorage and SessionStorage. Plainenglish.io/Blog/Implementing-Login-Case-Using-Localstorage-And-Sessionstorage. https://plainenglish.io/blog/implementing-login-case-using-localstorage-and-sessionstorage
+Storage removeItem() Method. (n.d.). Www.w3schools.com. Retrieved November 2, 2022, from https://www.w3schools.com/jsref/met_storage_removeitem.asp
+‌
+‌

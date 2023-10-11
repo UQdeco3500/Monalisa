@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>AMZ.PLACE</title>
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/swiper-bundle.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+   <!-- The lower css is from W3school for the fa fa-bars -->
+</head>
+
+<body class="page-home">
+   <!-- header -->
+   <header>
+      <nav>
+         <a href="1_home.html" class="nav__logo">
+            <img class="nav__logo-img" src="image/logo.png" alt="logo">
+         </a>
+         <div class="logo"> AMZ </div>
+
+         <input type="checkbox" id="click">
+         <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+         </label>
+
+         <ul>
+            <li><a class="for_home active" href="1_home.html">Home</a></li>
+            <li><a class="for_intro" href="2_intro.html">Intro</a></li>
+            <li><a class="for_room" href="3_room.html">Rooms</a></li>
+            <li><a class="for_events" href="4_event.html">Events</a></li>
+            <li><a class="for_dining" href="5_dining.html">Dining</a></li>
+            <li><a class="for_signin" href="6_signin.html"><label id="Signin_Label">SignIn</label></a></li>
+         </ul>
+      </nav>
+   </header>
+   <!-- header -->
+
+   <section class="about container" id="about">
+      <div class="swiper about-swiper">
+          <div class="swiper-wrapper">
+              <section class="swiper-slide">
+               <img class="home__image" src="image/1_homepage_image/homepage_bg_up.jpg" alt="grey battle ship">
+              </section>
+
+              <section class="swiper-slide">
+               <img class="home__image" src="image/3_roompage_image/3-3_twinroom_image/note-thanun-LMd7IfbnPsU-unsplash.jpg"
+               alt="books">
+              </section>
+
+              <section class="swiper-slide">
+               <img class="home__image" src="image/3_roompage_image/3-2_singleroom_image/joanna-kosinska-kKfVAvdBsAw-unsplash.jpg" alt="enjoy life">
+              </section>
+
+              <section class="swiper-slide">
+               <img class="home__image" src="image/3_roompage_image/3-2_singleroom_image/rhema-kallianpur-uocSnWMhnAs-unsplash.jpg" alt="grey battle ship">
+              </section>
+          </div>
+          <div class="swiper-pagination"></div>
+      </div>
+  </section>
+
+   <!-- main content -->
+   <main>
+      <div class="title">A. MAZE. ING. PLACE</div>
+
+      <content class="video_content">
+         <video class="home_video" id="VideoPlayer" src="video/AMZ.mp4" alt="AMZ Introducing Video" width="700" controls="true" autoplay="autoplay"
+            loop="true" muted defaultmuted playsinline />
+      </content>
+
+      <content class="content">
+         <img src="image/1_homepage_image/homepage_content.jpg" alt="Vacation">
+         <article class="text">
+            <h3>EARLY BIRD</h3>
+            <p>Dreaming of a thrilling escape? <br>
+               Book 90 days in advance and you will save 15% on your
+               booking. This offer is non-refundable</p>
+         </article>
+      </content>
+   </main>
+   <!-- main content -->
+
+   <div class="title">“Let’s get lost.”</div>
+   <img class="home__image celebrating" src="image/1_homepage_image/homepage_bg_down.jpg" alt="people celebrating">
+
+   <!-- footer -->
+   <footer class="footer__content">
+      <ul class="footer_text">
+         <h3 class="footer__title">AMZ Place</h3>
+         <li><a class="footer__link" onclick="alert('This Website Belongs to A.M.Z Place')">Copyright© A.M.Z</a></li>
+         <li><a class="footer__link" href="mailto: a.m.z@example.com">Email Us</a></li>
+         <li><a class="footer__link" href="tel:123-456-7890">Call Us</a></li>
+      </ul>
+   </footer>
+   <!-- footer -->
+
+
+   <script src="javascript/swiper-bundle.min.js"></script>
+   <script src="javascript/script2.js"></script>
+   <script src="javascript/script.js"></script>
+</body>
+
+</html>

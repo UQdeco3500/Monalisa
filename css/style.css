@@ -1,0 +1,1469 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+/* The Universal selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* The Universal selector */
+
+/* Navigation Bar of all pages */
+nav {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    position: relative;
+    background: #262829;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+    z-index: 200;
+}
+
+/* Style of the logo 'AMZ' in nav bar */
+.logo {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.nav__logo {
+    margin-left: -82px;
+    margin-top: 8px;
+}
+
+/* Logo Image */
+.nav__logo-img {
+    width: 45px;
+    height: 45px;
+    background-color: #d8d6cf;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a.active {
+    color: #EE695E;
+}
+
+nav ul li a:hover {
+    color: #262829;
+    background: #fff;
+}
+
+nav .menu-btn i {
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+    margin-right: -20px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Navigation Bar of all pages */
+
+/* Body of all pages */
+body {
+    background-color: #d8d6cf;
+}
+
+/* Body of all pages */
+
+/* Page 1-2: 1_Home_Page & 1-1_Home_After_Sign_In */
+
+.page-home .home__image {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.page-home .title {
+    position: relative;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    z-index: -1;
+    padding: 0 20px;
+}
+
+.page-home main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-home .video_content {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    margin: 30px 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: black;
+    position: relative;
+    z-index: -2;
+}
+
+.page-home .video_content video {
+    border-radius: 15px;
+}
+
+.page-home .content {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding: 20px;
+    margin: 30px 200px;
+    width: 75%;
+    margin-bottom: 70px;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    z-index: -1;
+}
+
+.page-home content img {
+    position: relative;
+    left: 0;
+    width: 500px;
+    padding: 10px;
+    z-index: -1;
+}
+
+.page-home .text h3 {
+    padding: 2px;
+    font-size: 30px;
+}
+
+.page-home .text p {
+    font-size: larger;
+}
+
+.page-home .celebrating {
+    margin-bottom: -18px;
+}
+
+/* Page 1-2: 1_Home_Page & 1-1_Home_After_Sign_In */
+
+/* Page 3: 2_Intro_Page */
+.page-intro {
+    background:url(../video/Tall\ Ship\ -\ 42669.mp4);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-intro .container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 490px;
+    width: 500px;
+    background: #f2f2f2;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 20px 8px #d0d0d0;
+    z-index: -2;
+}
+
+.page-intro .content {
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    text-align: justify;
+    color: black;
+    padding: 40px;
+}
+
+.page-intro h1 {
+    font-weight: 900;
+    text-align: center;
+}
+
+.page-intro .content h3 {
+    font-weight: 300;
+}
+
+.page-intro .flap {
+    width: 100%;
+    height: 100%;
+}
+
+.page-intro .flap::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    background: url(../image/2_intropage_image/double-door.png);
+    background-position: -10px;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+.page-intro .flap::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    right: 0;
+    background: url(../image/2_intropage_image/double-door.png);
+    background-position: -250px;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+.page-intro .container:hover .flap::after {
+    transform: translatex(300px);
+}
+
+.page-intro .container:hover .flap::before {
+    transform: translatex(-300px);
+}
+
+/* Page 3: 2_Intro_Page */
+
+/* Page 4: 3_Room_Page */
+.page-room main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.page-room .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 650px;
+    min-width: 650px;
+    background: #D8D6CF;
+    padding-top: 0px;
+}
+
+.page-room .container {
+    height: 350px;
+    width: 350px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 6px grey;
+    transition: 3s all;
+}
+
+.page-room .popup {
+    position: absolute;
+    margin-top: 60px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    z-index: 15;
+    box-shadow: 5px 5px 5px 5px rgb(144, 144, 144);
+    outline: none;
+}
+
+.page-room .popup h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.page-room .popup video {
+    width: 550px;
+}
+
+.page-room .popup button {
+    display: block;
+    position: absolute;
+    margin-top: -10px;
+    background-color: transparent;
+    font-size: 30px;
+    color: #262829;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.page-room .container div {
+    height: 50%;
+    width: 200px;
+    clip-path: polygon(100% 0, 50% 100%, 0 0);
+    transform: translateX(-50%);
+    transform-origin: bottom;
+    position: absolute;
+    left: 21%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 1000;
+    color: #393637;
+    writing-mode: vertical-rl;
+}
+
+.page-room .container a {
+    text-decoration: underline;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 1000;
+    color: #393637;
+}
+
+.page-room .container .one {
+    background: #D8D6CF;
+    left: 50%;
+}
+
+.page-room .container .two {
+    background: #C5C4C0;
+    transform: rotate(60deg);
+}
+
+.page-room .container .three {
+    background: #D8D6CF;
+    transform: rotate(120deg);
+}
+
+.page-room .container .four {
+    background: #C5C4C0;
+    margin: 12px auto;
+    transform: rotate(180deg);
+}
+
+.page-room .container .five {
+    background: #D8D6CF;
+    transform: rotate(240deg);
+}
+
+.page-room .container .six {
+    background: #C5C4C0;
+    transform: rotate(300deg);
+}
+
+.page-room .mid {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    position: absolute;
+    background: #EE695E;
+}
+
+.page-room #spin {
+    position: absolute;
+    margin-top: 500px;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+}
+
+.page-room #spin:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #C5C4C0;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+}
+
+.page-room #spin span {
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #393637;
+}
+
+.page-room #spin svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #F1F1F1;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+.page-room #spin:hover:before {
+    width: 100%;
+    background: #EE695E;
+}
+
+.page-room #spin:hover svg {
+    transform: translateX(0);
+}
+
+.page-room #spin:active {
+    transform: scale(0.95);
+}
+
+.page-room .stoper {
+    height: 50px;
+    width: 40px;
+    background: #EE695E;
+    position: absolute;
+    clip-path: polygon(100% 0, 50% 100%, 0 0);
+    margin-top: -350px;
+}
+
+.page-room p {
+    margin-top: 600px;
+    position: absolute;
+    color: #262829;
+}
+
+/* Page 4: 3_Room_Page */
+
+/* Page 5-10: 3-1_TentRoom_Page ~ 3_6_PalaceRoom_Page */
+.page-rooms .return {
+    position: absolute;
+    background-color: #EE695E;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: -30px;
+    margin-top: -20px;
+}
+
+.page-rooms #image {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    z-index: -20;
+}
+
+.tentroom #image {
+    object-position: 0 100%;
+}
+
+.singleroom #image {
+    object-position: 0 80%;
+}
+
+.twinroom #image {
+    object-position: 0 70%;
+}
+
+.doubleroom #image {
+    object-position: 0 80%;
+}
+
+.dorm #image {
+    object-position: 0 60%;
+}
+
+.palaceroom #image {
+    object-position: 0 80%;
+}
+
+.page-rooms .content {
+    margin: 40px;
+    line-height: 1.6;
+}
+
+.page-rooms .content #title {
+    text-align: center;
+}
+
+.page-rooms .room_description {
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.page-rooms .room_description img {
+    width: 100%;
+    height: 40vh;
+    margin-top: 10px;
+    object-fit: cover;
+}
+
+.tentroom .room_description img {
+    object-position: 0 70%;
+}
+
+.singleroom .room_description img {
+    object-position: 0 30%;
+}
+
+.twinroom .room_description img {
+    object-position: 0 50%;
+}
+
+.doubleroom .room_description img {
+    object-position: 0 50%;
+}
+
+.dorm .room_description img {
+    object-position: 0 45%;
+}
+
+.palaceroom .room_description img {
+    object-position: 0 20%;
+}
+
+.page-rooms .facilities {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.page-rooms .book_button {
+    position: absolute;
+    right: 40px;
+    top: 710px;
+    font-weight: bold;
+    color: #262829;
+    letter-spacing: 2px;
+    padding: 9px 20px;
+    border: 1px solid #262829;
+    border-radius: 1000px;
+    background: transparent;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.page-rooms .book_button:hover,
+.page-rooms .book_button:focus {
+    color: #EE695E;
+    border-color: currentColor;
+}
+
+.page-rooms .book_button:active {
+    transform: translate(2px);
+}
+
+/* Page 5-10: 3-1_TentRoom_Page ~ 3_6_PalaceRoom_Page */
+
+/* Page 11: 4_Event_Page */
+.page-event .title {
+    margin-top: 40px;
+    position: relative;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    z-index: -20;
+    padding: 0 20px;
+    text-decoration: underline;
+}
+
+.page-event content {
+    margin-top: 20px;
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    height: fit-content;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+/* .flip-card-container */
+.page-event .flip-card-container {
+    display: inline-block;
+    width: 300px;
+    height: 500px;
+    margin: 30px;
+    perspective: 1000px;
+}
+
+.page-event .flip-card {
+    width: inherit;
+    height: inherit;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: .6s .1s;
+}
+
+.page-event .flip-card-container:hover .flip-card,
+.flip-card-container:focus-within .flip-card {
+    transform: rotateY(180deg);
+}
+
+.page-event .card-front,
+.page-event .card-back {
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-event .card-front {
+    transform: rotateY(0deg);
+    z-index: 2;
+}
+
+.page-event .card-back {
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
+.page-event figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    z-index: -1;
+}
+
+.page-event .flip-card-container img {
+    height: 100%;
+    border-radius: 24px;
+}
+
+.page-event figcaption {
+    display: block;
+    width: auto;
+    margin-top: 12%;
+    padding: 8px 22px;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 2px;
+    word-spacing: 6px;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 12px;
+    color: hsl(0, 0%, 90%);
+    ;
+}
+
+.page-event button {
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+    padding: 9px 20px;
+    border: 1px solid gray;
+    border-radius: 1000px;
+    background: transparent;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.page-event button:hover,
+.page-event button:focus {
+    color: wheat;
+    border-color: currentColor;
+}
+
+.page-event button:active {
+    transform: translate(2px);
+}
+
+/* Popup container */
+.page-event .popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.page-event .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.page-event .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.page-event .popup .show {
+    visibility: visible;
+}
+
+/* Page 11: 4_Event_Page */
+
+/* Page 12: 5_Dining Page */
+.page-dining #Menu {
+    margin-top: 40px;
+    font-size: 40px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.page-dining section {
+    position: relative;
+    margin-bottom: 20px;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    height: fit-content;
+    flex-wrap: wrap;
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+    margin-bottom: 60px;
+}
+
+.page-dining .product_icon {
+    width: 120px;
+    margin-bottom: 0.5rem;
+    transition: 0.3s;
+}
+
+.page-dining .product {
+    position: relative;
+    background-color: white;
+    width: 220px;
+    padding: 2rem 0 1.5rem 0;
+    border-radius: 0.5rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.page-dining .tag {
+    position: absolute;
+    top: 4%;
+    left: 4%;
+    background-color: hsl(14, 91%, 54%);
+    color: hsl(14, 4%, 100%);
+    font-size: 0.813rem;
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+}
+
+.page-dining .productname {
+    font-size: 0.938rem;
+    font-weight: 500;
+}
+
+.page-dining .prices {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.page-dining .price {
+    font-weight: 500;
+    color: #262829;
+}
+
+.page-dining .original_price {
+    color: hsl(14, 91%, 54%);
+    font-size: 0.813rem;
+    text-decoration: line-through;
+    font-weight: 500;
+}
+
+.page-dining .addtocart {
+    display: inline-flex;
+    padding: .5rem;
+    border-radius: .25rem .25rem .75rem .25rem;
+    position: absolute;
+    bottom: 0;
+    right: -4rem;
+    background-color: hsl(14, 91%, 54%);
+}
+
+.page-dining .cart {
+    font-size: 1.25rem;
+}
+
+.page-dining .product:hover .product_icon {
+    transform: translateY(-.5rem);
+}
+
+.page-dining .product:hover .addtocart {
+    right: 0;
+}
+
+/* Page 12: 5_Dining Page */
+
+/* Page 13: 6_SignIn Page */
+.page-signin .forms-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-signin .forms {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 70px;
+}
+
+.page-signin .form-wrapper {
+    animation: hideLayer .3s ease-out forwards;
+}
+
+.page-signin .form-wrapper.is-active {
+    animation: showLayer .3s ease-in forwards;
+}
+
+@keyframes showLayer {
+    50% {
+        z-index: 1;
+    }
+
+    100% {
+        z-index: 1;
+    }
+}
+
+@keyframes hideLayer {
+    0% {
+        z-index: 1;
+    }
+
+    49.999% {
+        z-index: 1;
+    }
+}
+
+.page-signin .switcher {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: 16px;
+    letter-spacing: .5px;
+    color: #262829;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transform: translateX(0);
+    transition: all .3s ease-out;
+}
+
+.page-signin .form-wrapper.is-active .switcher-login {
+    color: #EE695E;
+    transform: translateX(90px);
+}
+
+.page-signin .form-wrapper.is-active .switcher-signup {
+    color: #EE695E;
+    transform: translateX(-90px);
+}
+
+.page-signin .underline {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    width: 100%;
+    height: 2px;
+}
+
+.page-signin .underline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: inherit;
+    display: block;
+    width: inherit;
+    height: inherit;
+    background-color: currentColor;
+    transition: transform .2s ease-out;
+}
+
+.page-signin .switcher-login .underline::before {
+    transform: translateX(101%);
+}
+
+.page-signin .switcher-signup .underline::before {
+    transform: translateX(-101%);
+}
+
+.page-signin .form-wrapper.is-active .underline::before {
+    transform: translateX(0);
+}
+
+.page-signin .form {
+    overflow: hidden;
+    min-width: 260px;
+    margin-top: 50px;
+    padding: 30px 25px;
+    border-radius: 5px;
+    transform-origin: top;
+}
+
+.page-signin .form-login {
+    animation: hideLogin .3s ease-out forwards;
+}
+
+.page-signin .form-wrapper.is-active .form-login {
+    animation: showLogin .3s ease-in forwards;
+}
+
+/* Show Login Form Animation  */
+@keyframes showLogin {
+    0% {
+        background: white;
+        transform: translate(40%, 10px);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        background-color: #EE695E;
+        transform: translate(35%, -20px);
+    }
+}
+
+/* Hide Login Form Animation  */
+@keyframes hideLogin {
+    0% {
+        background-color: white;
+        transform: translate(35%, -20px);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        background: #262829;
+        transform: translate(40%, 10px);
+    }
+}
+
+.page-signin .form-signup {
+    animation: hideSignup .3s ease-out forwards;
+}
+
+.page-signin .form-wrapper.is-active .form-signup {
+    animation: showSignup .3s ease-in forwards;
+}
+
+/* Show Signup Form Animation  */
+@keyframes showSignup {
+    0% {
+        background: white;
+        transform: translate(-40%, 10px) scaleY(.8);
+    }
+
+    50% {
+        transform: translate(0, 0) scaleY(.8);
+    }
+
+    100% {
+        background-color: #EE695E;
+        transform: translate(-35%, -20px) scaleY(1);
+    }
+}
+
+/* Hide Signup Form Animation  */
+@keyframes hideSignup {
+    0% {
+        background-color: white;
+        transform: translate(-35%, -20px) scaleY(1);
+    }
+
+    50% {
+        transform: translate(0, 0) scaleY(.8);
+    }
+
+    100% {
+        background: #262829;
+        transform: translate(-40%, 10px) scaleY(.8);
+    }
+}
+
+.page-signin .form fieldset {
+    position: relative;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: all .3s ease-out;
+}
+
+.page-signin .form-login fieldset {
+    transform: translateX(-50%);
+}
+
+.page-signin .form-signup fieldset {
+    transform: translateX(50%);
+}
+
+.page-signin .form-wrapper.is-active fieldset {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity .4s ease-in, transform .35s ease-in;
+}
+
+.page-signin .input-block {
+    margin-bottom: 20px;
+}
+
+.page-signin .input-block label {
+    font-size: 14px;
+    color: #262829;
+}
+
+.page-signin .input-block input {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 16px;
+    line-height: 40px;
+    color: #3b4465;
+    background: white;
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+.page-signin .form [type='reset'] {
+    opacity: 0;
+    display: block;
+    min-width: 120px;
+    margin: 30px auto 10px;
+    font-size: 18px;
+    line-height: 40px;
+    border-radius: 25px;
+    border: none;
+    transition: all .3s ease-out;
+}
+
+.page-signin .form-wrapper.is-active .form [type='reset'] {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all .4s ease-in;
+}
+
+.page-signin .btn-login {
+    color: white;
+    background: #262829;
+    transform: translateX(-30%);
+}
+
+.page-signin .btn-signup {
+    color: white;
+    background: #262829;
+    transform: translateX(-30%);
+}
+
+/* Wave */
+.page-signin .wave {
+    display: flex;
+    filter: drop-shadow(120px 0 0 rgba(149, 191, 218, 0.5));
+    position: absolute;
+    bottom: 0;
+    z-index: -100;
+}
+
+.page-signin .wave div {
+    position: relative;
+    width: 40px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.page-signin .wave div::before {
+    content: "";
+    width: 300%;
+    height: 100%;
+    background-color: rgba(149, 191, 218, 1);
+    position: absolute;
+    left: -100%;
+    top: 50%;
+    animation: upDown 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate, wave 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate;
+    animation-delay: var(--d1), var(--d2);
+}
+
+/* Helps create the upper and lower animation of waves vertically */
+@keyframes upDown {
+    0% {
+        top: 70%;
+    }
+
+    100% {
+        top: 30%;
+    }
+}
+
+/* Rotates the waves around the z-axis  */
+@keyframes wave {
+    0% {
+        transform: rotateZ(-20deg);
+    }
+
+    100% {
+        transform: rotateZ(20deg);
+    }
+}
+
+/* Page 13: 6_SignIn Page */
+
+/* Footer of all pages */
+.footer__content {
+    bottom: -15px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #fff;
+}
+
+.footer__title {
+    margin-bottom: 1rem;
+}
+
+.footer_text {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    column-gap: 50px;
+}
+
+.footer__link {
+    font-size: 18px;
+    text-decoration: none;
+    color: #262829;
+    transition: .3s;
+}
+
+.footer__link:hover {
+    color: wheat;
+}
+
+/* Footer of all pages */
+
+
+/* Media queries*/
+@media (max-width: 1200px) {
+    nav .menu-btn i {
+        display: block;
+        position: relative;
+        z-index: 200;
+    }
+
+    #click:checked~.menu-btn i:before {
+        content: "\f00d";
+    }
+
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: #262829;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease;
+        z-index: 200;
+    }
+
+    #click:checked~ul {
+        left: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 40px 0;
+    }
+
+    nav ul li a {
+        width: 100%;
+        margin-left: -100%;
+        display: block;
+        font-size: 20px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    #click:checked~ul li a {
+        margin-left: 0px;
+    }
+
+    nav ul li a:hover {
+        background: none;
+        color: wheat;
+    }
+}
+
+/* Media queries*/
+
+/* Media queries for the event_page*/
+/* Organize the event_page items into order */
+@media (min-width: 960px) and (max-width: 1450px) {
+    .page-event content {
+        margin-top: 20px;
+        padding: 0 120px 0 120px;
+    }
+
+}
+
+/* Media queries for the event_page*/
+
+/* Media queries - Tablet screen */
+@media (min-width: 750px) and (max-width: 1200px) {
+    .page-home .video_content {
+        width: 85%;
+        margin: 40px 100px 40px 100px;
+    }
+
+    .page-home .content {
+        width: 85%;
+        margin: 40px 100px 40px 100px;
+    }
+
+    .page-home content img {
+        width: 100%;
+        height: 25vh;
+        padding: 20px;
+    }
+
+    .page-room .content {
+        z-index: 1;
+    }
+
+    .page-rooms #image {
+        height: 45vh;
+    }
+
+    .page-rooms .book_button {
+        top: 610px;
+    }
+}
+
+/* Media queries - Tablet screen */
+
+/* Media queries - Phone screen */
+@media (max-width: 750px) {
+
+    /* Page 1-2: 1_Home_Page & 1-1_Home_After_Sign_In */
+    /* Make sizes of fonts and photos smaller */
+    .page-home .title {
+        font-size: large;
+    }
+
+    .page-home .video_content {
+        width: 85%;
+        height: 200px;
+        margin: 20px 100px 20px 100px;
+    }
+
+    .page-home .video_content video {
+        width: 75%;
+        height: 200px;
+    }
+
+    .page-home .content {
+        width: 85%;
+        height: 150px;
+        padding: 10px;
+        margin: 10px 100px 10px 100px;
+    }
+
+    .page-home content img {
+        position: relative;
+        width: 45%;
+        padding: 10px;
+    }
+
+    .page-home .text h3 {
+        font-size: 15px;
+    }
+
+    .page-home .text p {
+        font-size: 10px;
+    }
+
+    /* Page 1-2: 1_Home_Page & 1-1_Home_After_Sign_In */
+
+    /* Page 3: 2_Intro_Page */
+    .page-intro .container {
+        width: 333.33px;
+        height: 326.66px;
+    }
+
+    .page-intro h1 {
+        font-weight: 900;
+        font-size: large;
+    }
+
+    .page-intro .content h3 {
+        font-size: 11px;
+    }
+
+    .page-intro .flap::before {
+        background-size: 205%;
+        background-position: -9px;
+    }
+
+    .page-intro .flap::after {
+        background-size: 205%;
+        background-position: -166px;
+    }
+
+    /* Page 3: 2_Intro_Page */
+
+    /* Page 4: 3_Room_Page */
+    .page-room .content {
+        position: absolute;
+        margin-top: 130%;
+        z-index: 1;
+    }
+
+    .page-room .popup {
+        margin-top: 450px;
+    }
+
+    .page-room .popup h2 {
+        font-size: medium;
+    }
+
+    .page-room .popup video {
+        width: 315px;
+    }
+
+    /* Page 4: 3_Room_Page */
+
+    /* Page 5-10: 3-1_TentRoom_Page ~ 3_6_PalaceRoom_Page */
+    .page-rooms .return {
+        padding: 12px 12px;
+        margin-left: -90px;
+    }
+
+    .page-rooms #image {
+        height: 30vh;
+    }
+
+    .page-rooms .content {
+        margin: 20px;
+    }
+
+    .page-rooms .room_description {
+        font-size: 11px;
+    }
+
+    .page-rooms .room_description img {
+        height: 20vh;
+    }
+
+    .page-rooms .facilities {
+        width: 100%;
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 40px;
+        gap: 50px;
+    }
+
+    .page-rooms .book_button {
+        right: 15px;
+        top: 470px;
+        padding: 5px 9px;
+    }
+
+    /* Page 5-10: 3-1_TentRoom_Page ~ 3_6_PalaceRoom_Page */
+
+    /* Page 11: 4_Event_Page */
+    .page-event .title {
+        font-size: 35px;
+    }
+
+    /* Page 11: 4_Event_Page */
+
+    /* Footer */
+    .footer__content {
+        z-index: 1;
+    }
+
+    .footer__title {
+        font-size: medium;
+    }
+
+    .footer_text {
+        column-gap: 12px;
+        list-style: none;
+    }
+
+    .footer__link {
+        font-size: 12px;
+    }
+}
+
+/* Media queries - Phone screen */
