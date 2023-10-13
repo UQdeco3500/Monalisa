@@ -4,7 +4,7 @@
 
 .emoji img {
     padding:10px;
-    margin: 50px;
+    margin: 10px;
   }
 
   .words {
@@ -19,7 +19,8 @@
     background-color: #DADADA;
     border-radius: 15px;         
     padding: 10px; 
-    margin:50px;              
+    margin:100px;
+    margin-top: 200px;              
   }
 
   body {
