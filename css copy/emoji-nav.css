@@ -1,0 +1,22 @@
+.emoji-nav {
+    margin: 20px;;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the buttons horizontally */
+    align-items: center; /* Centers the buttons vertically */
+    gap: 30px; /* Space between the buttons */
+}
+
+.emoji-nav button {
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    flex: 1; /* Allows the buttons to grow and shrink with the container */
+    max-width: 80px; /* Minimum width of the button, can be adjusted as needed */
+}
+
+.emoji-nav img {
+    width: 100%; /* Makes the image take the full width of its container (button) */
+    height: auto;
+}
