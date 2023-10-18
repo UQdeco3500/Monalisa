@@ -10,6 +10,25 @@
   height: 175px; /* This maintains the image's aspect ratio */
 }
 
+.emoji {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;  /* Center align the emoji buttons */
+  gap: 5px;  /* Space between each emoji button */
+}
+
+.emoji button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.emoji img {
+  width: 30px;  /* Define the desired size for the emoji images */
+  height: 30px;
+}
+
 .artists-list {
   border: 3px solid black;
   border-radius: 10px;
