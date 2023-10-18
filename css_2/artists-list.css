@@ -1,3 +1,15 @@
+.main-artworks {
+  margin: 0 40px 20px 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+}
+
+.artworks img {
+  width: 100%; /* This ensures that the image takes up the full width of its container */
+  height: 175px; /* This maintains the image's aspect ratio */
+}
+
 .artists-list {
   border: 3px solid black;
   border-radius: 10px;
