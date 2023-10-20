@@ -1,0 +1,49 @@
+.artwork-info {
+    margin-top: -20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: grid;
+    /* grid-template-columns: auto 1fr; Making the image take its natural size, and the details fill remaining space */
+    grid-gap: 30px;
+    width: 80%; /* Taking 80% of the viewport width */
+    max-width: 1024px; /* Setting a maximum width for the container */
+    align-items: center; /* This centers the items vertically */
+}
+
+.artwork-image img {
+    display: block;
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* This centers the image horizontally */
+}
+
+.artwork-details {
+    text-align: left; /* Aligning the text to the left for details */
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.artist-name,
+.creation-date,
+.dimensions {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.description {
+    overflow: auto;
+    width: 600px;
+    height: 250px;
+    margin-top: 20px;
+    font-size: 16px;
+    text-align:left; /* This gives a nice block format for the description */
+}
+
+.description p {
+    margin-bottom: 20px; /* Adds space between paragraphs */
+}
