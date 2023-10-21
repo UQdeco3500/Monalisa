@@ -57,13 +57,25 @@
       <img src="img/collection/pxArt.png" alt="Ghost Gully Evening">
     </div>
     <div class="artwork-details">
-      <h2>Ghost Gully Evening</h2>
+      <h2><?php echo $artworkName; ?></h2>
       <p class="artist-name">Artist: Henry Rielly</p>
       <p class="creation-date">Date Created: 1894</p>
       <div class="description">
-        <p>
-          Stanthorpe, some 200km southwest of Brisbane, is located in the Southern Downs, the centre of the Granite Belt, a region of spectacular geologic formations. Tin was first discovered along watercourses, streams and creeks in the area in 1852, and by the 1870s saw a great rush to mine alluvial tin at Quart Pot Creek, now known as Stanthorpe (Tintown), named after the Latin word for tin (Stannum). At one time the area claimed to be the most successful tin mining field in Queensland, as tin was in plentiful supply from the granite outcrops from which it originates.
-        </p>
+      <?php
+        include 'db_connection.php';
+
+        $artworkName = $_GET["artwork"];
+        $emotion = $_GET["emotion"];
+
+        $column = ucfirst($emotion) . " Description"; // e.g., 'Happy Description'
+
+        $sql = "SELECT `$column` FROM monalisa WHERE `Artwork Name` = '$artworkName'";
+        $result = $conn->query($sql);
+        $row = $result->fetch_assoc();
+
+        echo $row[$column];
+        ?>
+
       </div>
     </div>
   </div>
