@@ -12,21 +12,34 @@
 
 .emoji {
   margin-top: 20px;
-  display: flex;
-  justify-content: center;  /* Center align the emoji buttons */
-  gap: 5px;  /* Space between each emoji button */
+  display: grid;  /* Set display to grid */
+  grid-template-columns: repeat(4, 1fr);  /* Create 4 columns with equal widths */
+  gap: px;  /* Space between grid items */
+  align-items: center;
+  justify-items: center;  /* Center align the content in each grid cell */
 }
 
-.emoji button {
-  border: none;
-  background: none;
-  cursor: pointer;
-  padding: 5px;
+.emoji-option {
+  display: inline-block;  /* Aligns the divs horizontally within the nav */
+  text-align: center;     /* Centers the content inside each div */
+  margin:0 10px;         /* Adds some space between each emoji-option div */
 }
+
+.emoji {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
+  gap: 10px 10px; /* Vertical and horizontal gap between items */
+}
+
+.emoji-option {
+  text-align: center; /* Centers the content inside each div */
+}
+
 
 .emoji img {
   width: 30px;  /* Define the desired size for the emoji images */
   height: 30px;
+  margin-bottom: 10px; /* Gap between img and p */
 }
 
 .artists-list {
@@ -41,10 +54,5 @@
   transform: scale(1.08);
   box-shadow: none;
   cursor: pointer;
-}
-
-.neutral-text {
-  font-size: 18px;
-  color: white;
 }
 

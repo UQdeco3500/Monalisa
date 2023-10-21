@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
 
   <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/artists-list.css"/>
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/main-pages.css" />
   <link rel="stylesheet" href="css/main-nav.css" />
@@ -57,26 +58,36 @@ $result = $conn->query($sql);
 
 <div class="artist-background">
     <div class="main-artworks">
-
         <?php
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
+                $total = $row['happy'] + $row['angry'] + $row['sad'] + $row['neutral'];
+
+                $happyPercentage = ($total == 0) ? 0 : round(($row['happy'] / $total) * 100);
+                $angryPercentage = ($total == 0) ? 0 : round(($row['angry'] / $total) * 100);
+                $sadPercentage = ($total == 0) ? 0 : round(($row['sad'] / $total) * 100);
+                $neutralPercentage = ($total == 0) ? 0 : round(($row['neutral'] / $total) * 100);
                 ?>
+
                 <div class='artworks' data-artwork-id='<?php echo $row['id']; ?>'>
                     <img src='<?php echo $row['Image']; ?>' alt='<?php echo $row['Artwork Name']; ?>'>
                     <nav class="emoji">
-                        <button type="button">
-                            <img src="img/emoji/happy.png" alt="Happy Emoji"> <p class="neutral-text"><?php echo $row['happy']; ?></p>
-                        </button>
-                        <button type="button">
-                            <img src="img/emoji/angry.png" alt="Angry Emoji"> <p class="neutral-text"><?php echo $row['angry']; ?></p>
-                        </button>
-                        <button type="button">
-                            <img src="img/emoji/sad.png" alt="Sad Emoji"> <p class="neutral-text"><?php echo $row['sad']; ?></p>
-                        </button>
-                        <button type="button">
-                            <img src="img/emoji/neutral.png" alt="Neutral Emoji"> <p class="neutral-text"><?php echo $row['neutral']; ?></p>
-                        </button>
+                        <div class="emoji-option">
+                            <img src="img/emoji/happy.png" alt="Happy Emoji">
+                            <p><?php echo $happyPercentage . '%'; ?></p>
+                        </div>
+                        <div class="emoji-option">
+                            <img src="img/emoji/angry.png" alt="Angry Emoji">
+                            <p><?php echo $angryPercentage . '%'; ?></p>
+                        </div>
+                        <div class="emoji-option">
+                            <img src="img/emoji/sad.png" alt="Sad Emoji">
+                            <p><?php echo $sadPercentage . '%'; ?></p>
+                        </div>
+                        <div class="emoji-option">
+                            <img src="img/emoji/neutral.png" alt="Neutral Emoji">
+                            <p><?php echo $neutralPercentage . '%'; ?></p>
+                        </div>
                     </nav>
                 </div> <!-- Close artwork div -->
                 <?php
@@ -88,6 +99,7 @@ $result = $conn->query($sql);
 
     </div>
 </div>
+
 
 
 
