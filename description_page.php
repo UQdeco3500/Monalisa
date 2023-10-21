@@ -47,8 +47,8 @@
   <h1 class="main-title">The Art Museum</h1>
 
   <nav class="main-nav">
-      <a class="main-pages" href="index.html">Home</a>
-      <a class="main-pages" href="collection.html"> Collect!</a>
+      <a class="main-pages" href="index.php">Home</a>
+      <a class="main-pages" href="collection.php"> Collect!</a>
       <a class="main-pages" href="map.html">Map</a>
     </nav>
 

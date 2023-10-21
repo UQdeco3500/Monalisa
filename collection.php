@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -45,11 +45,53 @@
 
   <h1 class="main-title">The Art Museum</h1>
     <nav class="main-nav">
-      <a class="main-pages" href="index.html">Home</a>
+      <a class="main-pages" href="index.php">Home</a>
       <a class="main-pages" href="collection.php"> Collection</a>
       <a class="main-pages" href="map.html">Map</a>
     </nav>
 
+    <?php include 'db_connect.php';
+$sql = "SELECT `id`, `Artwork Name`, `Image`, `Artist`, `Year`, `happy`, `angry`, `sad`, `neutral` FROM `monalisa`";
+$result = $conn->query($sql);
+?>
+
+<div class="artist-background">
+    <div class="main-artworks">
+
+        <?php
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                ?>
+                <div class='artworks' data-artwork-id='<?php echo $row['id']; ?>'>
+                    <img src='<?php echo $row['Image']; ?>' alt='<?php echo $row['Artwork Name']; ?>'>
+                    <nav class="emoji">
+                        <button type="button">
+                            <img src="img/emoji/happy.png" alt="Happy Emoji"> <p class="neutral-text"><?php echo $row['happy']; ?></p>
+                        </button>
+                        <button type="button">
+                            <img src="img/emoji/angry.png" alt="Angry Emoji"> <p class="neutral-text"><?php echo $row['angry']; ?></p>
+                        </button>
+                        <button type="button">
+                            <img src="img/emoji/sad.png" alt="Sad Emoji"> <p class="neutral-text"><?php echo $row['sad']; ?></p>
+                        </button>
+                        <button type="button">
+                            <img src="img/emoji/neutral.png" alt="Neutral Emoji"> <p class="neutral-text"><?php echo $row['neutral']; ?></p>
+                        </button>
+                    </nav>
+                </div> <!-- Close artwork div -->
+                <?php
+            }
+        } else {
+            echo "No artworks found.";
+        }
+        ?>
+
+    </div>
+</div>
+
+
+
+<!-- 
   <div class="artist-background">
     <div class="main-artworks">
       <div class="artworks">
@@ -138,7 +180,7 @@
         </nav>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <form oninput="body.setAttribute('data-light', slider.value)">
     <div class="icon sun">

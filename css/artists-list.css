@@ -42,3 +42,9 @@
   box-shadow: none;
   cursor: pointer;
 }
+
+.neutral-text {
+  font-size: 18px;
+  color: white;
+}
+

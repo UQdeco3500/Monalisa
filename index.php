@@ -25,6 +25,10 @@
     <link rel="stylesheet" href="css/emoji-nav.css">
     <link rel="stylesheet" href="css/words.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </head>
 
 <body>
@@ -44,8 +48,8 @@
 
     <h1 class="main-title">The Art Museum</h1>
     <nav class="main-nav">
-      <a class="main-pages" href="index.html">Home</a>
-      <a class="main-pages" href="collection.html"> Collection</a>
+      <a class="main-pages" href="index.php">Home</a>
+      <a class="main-pages" href="collection.php"> Collection</a>
       <a class="main-pages" href="map.html">Map</a>
     </nav>
 
@@ -54,7 +58,9 @@
       <p>How does this artwork make you feel?</p>
     </div>
     
-    <?php include 'db_connect.php'; 
+    <?php include 'db_connect.php';
+    $sql = "SELECT `id`, `Artwork Name`, `Image`, `Artist`, `Year`, `Happy Description`, `Angry Description`, `Sad Description`, `Neutral Description`, `happy`, `angry`, `sad`, `neutral` FROM `monalisa`";
+    $result = $conn->query($sql);
     if ($result->num_rows > 0) {
     ?>
 
@@ -62,9 +68,9 @@
         <div class="swiper-wrapper">
             <?php
             while($row = $result->fetch_assoc()) {
-                echo "<div class='swiper-slide slide_1'>";
-                echo "<img src='" . $row['Image'] . "' alt='" . $row['Artwork Name'] . "'>";
-                echo "</div>";
+              echo "<div class='swiper-slide slide_1' data-artwork-id='" . $row['id'] . "'>";
+              echo "<img src='" . $row['Image'] . "' alt='" . $row['Artwork Name'] . "'>";
+              echo "</div>";
             }
             ?>
         </div>
@@ -72,10 +78,7 @@
         <div class="swiper-button-prev"></div>
     </div>
 
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<?php
+    <?php
 } else {
     echo "0 results";
 }
@@ -97,8 +100,6 @@ $conn->close();
   </button>
 </nav>
 
-
-    <!-- Swiper Initialization -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const mySwiper = new Swiper('.mySwiper', {
@@ -108,14 +109,27 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     });
 
-    // Add event listeners to all emoji buttons
     const emojiButtons = document.querySelectorAll('.emoji-nav button');
     emojiButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // Get the description type from the data attribute of the button
             const descriptionType = button.getAttribute('data-description');
-            // Redirect to description_page.php with active slide index and description type as parameters
-            window.location.href = `description_page.php?activeSlide=${mySwiper.activeIndex}&description=${descriptionType}`;
+            const activeSlideIndex = mySwiper.activeIndex;
+            const artworkId = document.querySelector(`.swiper-slide:nth-child(${activeSlideIndex + 1})`).getAttribute('data-artwork-id');
+
+            // Send AJAX request to increment click count
+            fetch(`update_click_count.php?artworkId=${artworkId}&descriptionType=${descriptionType}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        console.log('Click count incremented');
+                    } else {
+                        console.error('Failed to increment click count');
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+
+            // Redirect to description_page.php
+            window.location.href = `description_page.php?activeSlide=${activeSlideIndex}&description=${descriptionType}`;
         });
     });
 });
