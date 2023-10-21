@@ -36,4 +36,20 @@ How to reload page only once in JavaScript ? (2021, March 10). GeeksforGeeks. ht
 Kaur, R. (2020, October 24). How to Store Login Sessions with LocalStorage and SessionStorage. Plainenglish.io/Blog/Implementing-Login-Case-Using-Localstorage-And-Sessionstorage. https://plainenglish.io/blog/implementing-login-case-using-localstorage-and-sessionstorage
 Storage removeItem() Method. (n.d.). Www.w3schools.com. Retrieved November 2, 2022, from https://www.w3schools.com/jsref/met_storage_removeitem.asp
 ‌
+paintings and background stories
+An alien in Australia 1904, reworked later. (n.d.). Collection.qagoma.qld.gov.au. Retrieved October 2, 2023, from https://collection.qagoma.qld.gov.au/objects/7918
+Ghost Gully evening 1894. (n.d.). Collection.qagoma.qld.gov.au. Retrieved October 2, 2023, from https://collection.qagoma.qld.gov.au/objects/5093
+Murray, E. (2022, July 31). Go back in time to Margaret Olley’s Brisbane. QAGOMA Blog. https://blog.qagoma.qld.gov.au/margaret-olleys-view-of-south-brisbane-now-home-to-the-queensland-art-gallery-australia/
+Murray, E. (2022, October 26). A tale of two blooms. QAGOMA Blog. https://blog.qagoma.qld.gov.au/a-tale-of-two-blooms-by-r-godfrey-rivers/
+QAGOMA. (2022, August 25). Accomplished and capable: Hilda Rix Nicholas “The fair musterer.” QAGOMA Blog. https://blog.qagoma.qld.gov.au/accomplished-and-capable-hilda-rix-nicholas-the-fair-musterer/
+QAGOMA. (2023, January 2). Go back in time to an evening at Ghost Gully in Stanthorpe. QAGOMA Blog. https://blog.qagoma.qld.gov.au/go-back-in-time-to-an-evening-at-ghost-gully-stanthorpe-queensland-australia/
+Queensl, & Art, A. G. | G. of M. (2021, December 12). Mysterious and mundane: The art of Jeffrey Smart. QAGOMA Blog. https://blog.qagoma.qld.gov.au/mysterious-and-mundane-the-art-of-jeffrey-smart-australia/
+South Brisbane 1966. (n.d.). Collection.qagoma.qld.gov.au. Retrieved October 2, 2023, from https://collection.qagoma.qld.gov.au/objects/17263
+The fair musterer 1935. (n.d.). Collection.qagoma.qld.gov.au. Retrieved October 2, 2023, from https://collection.qagoma.qld.gov.au/objects/6989
+The reservoir, Centennial Park 1988. (n.d.). Collection.qagoma.qld.gov.au. Retrieved October 2, 2023, from https://collection.qagoma.qld.gov.au/objects/12274
+
+‌
+‌
+
+
 ‌
