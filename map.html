@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/main-title.css" />
     <link rel="stylesheet" href="css/light.css" />
     <link rel="stylesheet" href="css/words.css">
+
     
   </head>
   <body>
@@ -42,6 +43,24 @@
       <a class="main-pages" href="collection.php"> Collection</a>
       <a class="main-pages" href="map.html">Map</a>
     </nav>
+
+    <div class="popup">
+      <button id="close">&times;</button>
+      <h2>Manual to use this portalble device</h2>
+      <video id="VideoPlayer" src="video/manual.mp4" 
+          controls="true" autoplay="autoplay" loop="false" muted defaultmuted playsinline />
+    </div>
+
+    <script>// popup - video
+      window.addEventListener("load", function () {
+          function open(event) {
+            document.querySelector(".popup").style.display = "block";
+          }
+        });
+        
+        document.querySelector("#close").addEventListener("click", function () {
+          document.querySelector(".popup").style.display = "none";
+        });</script>
 
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=600 height=500 tabindex="-1"></canvas>

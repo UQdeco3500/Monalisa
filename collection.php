@@ -30,13 +30,6 @@
 </head>
 
 <body>
-  <div class="popup">
-              <button id="close">&times;</button>
-              <h2>Manual to use this wheel</h2>
-              <video id="VideoPlayer" src="video/Screen Recording 2022-10-03 at 3.42.13 pm.mp4" 
-                  controls="true" autoplay="autoplay" loop="false" muted defaultmuted playsinline />
-    </div>
-
   <div class="lamp-wrapper">
     <div class="lamp-rope"></div>
     <div class="lamp">

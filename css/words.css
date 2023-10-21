@@ -1,3 +1,47 @@
 .words{
   color: white;
 }
+
+#close{
+  align-self: baseline;
+  margin: 20px;
+}
+
+.popup {
+  position: absolute;
+  margin-top: 30px;
+  width: 80%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  z-index: 15;
+  box-shadow: 5px 5px 5px 5px rgb(144, 144, 144);
+  outline: none;
+}
+
+.popup h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.popup video {
+  width: 600px;
+  height: 500px;
+}
+
+.popup button {
+  display: block;
+  position: absolute;
+  margin-top: -10px;
+  background-color: transparent;
+  font-size: 30px;
+  color: #262829;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
