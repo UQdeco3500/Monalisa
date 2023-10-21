@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en-us">
 
 <head>
   <meta charset="UTF-8" />
@@ -47,31 +47,47 @@
   <h1 class="main-title">The Art Museum</h1>
 
   <nav class="main-nav">
-      <a class="main-pages" href="index.html">Home</a>
-      <a class="main-pages" href="collection.html"> Collect!</a>
+      <a class="main-pages" href="index.php">Home</a>
+      <a class="main-pages" href="collection.php"> Collect!</a>
       <a class="main-pages" href="map.html">Map</a>
     </nav>
 
-  <div class="artwork-info">
-    <div class="artwork-image">
-      <img src="img/collection/pxArt.png" alt="Ghost Gully Evening">
-    </div>
-    <div class="artwork-details">
-      <h2>Ghost Gully Evening</h2>
-      <p class="artist-name">Artist: Henry Rielly</p>
-      <p class="creation-date">Date Created: 1894</p>
-      <div class="description">
-        <p>
-          Henry Rielly's painting, "Ghost Gully Evening 1894", presents a melancholic departure from Australia's
-          conventional sunny imagery, depicting a serene evening with three withered trees and two Bushmen. Set in Ghost
-          Gully near Whiskey Gully in Queensland, the site has tales of miners hallucinating from alcohol withdrawal.
-          Rielly, a prominent figure in Victoria's art scene, showcased this painting at the Queensland Art Society,
-          later donating it to the Queensland National Art Gallery. The backdrop, Stanthorpe, is renowned for its
-          geological wonders and rich tin mining history.
-        </p>
-      </div>
-    </div>
-  </div>
+    <?php include 'db_connect.php';
+
+    // Get the artwork ID from the URL
+    $artworkId = isset($_GET['artworkId']) ? intval($_GET['artworkId']) : 1; // Default to 1 if not provided
+
+    // Fetch data for the specific artwork based on the provided artwork ID
+    $sql = "SELECT `id`, `Artwork Name`, `Image`, `Artist`, `Year`, `Happy Description`, `Angry Description`, `Sad Description`, `Neutral Description` FROM `monalisa` WHERE `id` = $artworkId";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+    ?>
+        <div class="artwork-info">
+        <div class="artwork-image">
+            <img src="<?php echo $row['Image']; ?>" alt="<?php echo $row['Artwork Name']; ?>">
+        </div>
+        <div class="artwork-details">
+            <h2><?php echo $row['Artwork Name']; ?></h2>
+            <p class="artist-name"><?php echo $row['Artist']; ?></p>
+            <p class="creation-date">Date Created: <?php echo $row['Year']; ?></p>
+            <div class="description">
+                <p><?php echo $row['Happy Description']; ?></p>
+                <p><?php echo $row['Angry Description']; ?></p>
+                <p><?php echo $row['Sad Description']; ?></p>
+                <p><?php echo $row['Neutral Description']; ?></p>
+            </div>
+        </div>
+        </div>
+    <?php
+    } else {
+        echo "No results found";
+    }
+
+    $conn->close();
+    ?>
+  
   <!-- <form oninput="body.setAttribute('data-light', slider.value)">
     <div class="icon sun">
       <div class="ray"></div>

@@ -30,6 +30,13 @@
 </head>
 
 <body>
+  <div class="popup">
+              <button id="close">&times;</button>
+              <h2>Manual to use this wheel</h2>
+              <video id="VideoPlayer" src="video/Screen Recording 2022-10-03 at 3.42.13 pm.mp4" 
+                  controls="true" autoplay="autoplay" loop="false" muted defaultmuted playsinline />
+    </div>
+
   <div class="lamp-wrapper">
     <div class="lamp-rope"></div>
     <div class="lamp">
@@ -69,9 +76,12 @@ $result = $conn->query($sql);
                 $neutralPercentage = ($total == 0) ? 0 : round(($row['neutral'] / $total) * 100);
                 ?>
 
-                <div class='artworks' data-artwork-id='<?php echo $row['id']; ?>'>
-                    <img src='<?php echo $row['Image']; ?>' alt='<?php echo $row['Artwork Name']; ?>'>
-                    <nav class="emoji">
+              <div class='artworks' data-artwork-id='<?php echo $row['id']; ?>'>
+                  <!-- Wrap the image inside an anchor tag -->
+                  <a href="description_all.php?artworkId=<?php echo $row['id']; ?>">
+                      <img src='<?php echo $row['Image']; ?>' alt='<?php echo $row['Artwork Name']; ?>'>
+                  </a>
+                  <nav class="emoji">
                         <div class="emoji-option">
                             <img src="img/emoji/happy.png" alt="Happy Emoji">
                             <p><?php echo $happyPercentage . '%'; ?></p>
@@ -89,7 +99,7 @@ $result = $conn->query($sql);
                             <p><?php echo $neutralPercentage . '%'; ?></p>
                         </div>
                     </nav>
-                </div> <!-- Close artwork div -->
+              </div>
                 <?php
             }
         } else {
@@ -99,100 +109,6 @@ $result = $conn->query($sql);
 
     </div>
 </div>
-
-
-
-
-<!-- 
-  <div class="artist-background">
-    <div class="main-artworks">
-      <div class="artworks">
-        <img src="img/collection/pxArt.png">
-        <nav class="emoji">
-          <button type="button">
-            <img src="img/emoji/happy.png" alt="Click Me!">
-          </button>
-          <button type="button">
-            <img src="img/emoji/angry.png" alt="Click Me!">
-          </button>
-          <button type="button">
-            <img src="img/emoji/sad.png" alt="Click Me!">
-          </button>
-          <button type="button">
-            <img src="img/emoji/neutral.png" alt="Click Me!">
-          </button>
-        </nav>
-      </div>
-      <div class="artworks">
-        <img src="img/collection/pxArt-2.png">
-        <nav class="emoji">
-          <button type="button">
-            <img src="img/emoji/happy.png" alt="Click Me!">
-          </button>
-          <button type="button">
-            <img src="img/emoji/angry.png" alt="Click Me!">
-          </button>
-          <button type="button">
-            <img src="img/emoji/sad.png" alt="Click Me!">
-          </button>
-          <button type="button">
-            <img src="img/emoji/neutral.png" alt="Click Me!">
-          </button>
-        </nav>
-      </div>
-      <div class="artworks">
-        <img src="img/collection/pxArt-3.png">
-        <nav class="emoji">
-          <button type="button">
-            <img src="img/emoji/happy.png" alt="Click Me!">
-          </button>
-          <button type="button">
-            <img src="img/emoji/angry.png" alt="Click Me!">
-          </button>
-          <button type="button">
-            <img src="img/emoji/sad.png" alt="Click Me!">
-          </button>
-          <button type="button">
-            <img src="img/emoji/neutral.png" alt="Click Me!">
-          </button>
-        </nav>
-      </div>
-      <div class="artworks">
-        <img src="img/collection/pxArt-4.png">
-        <nav class="emoji">
-          <button type="button">
-            <img src="img/emoji/happy.png" alt="Click Me!">
-          </button>
-          <button type="button">
-            <img src="img/emoji/angry.png" alt="Click Me!">
-          </button>
-          <button type="button">
-            <img src="img/emoji/sad.png" alt="Click Me!">
-          </button>
-          <button type="button">
-            <img src="img/emoji/neutral.png" alt="Click Me!">
-          </button>
-        </nav>
-      </div>
-      <div class="artworks">
-        <img src="img/collection/pxArt-5.png">
-        <nav class="emoji">
-          <button type="button">
-            <img src="img/emoji/happy.png" alt="Click Me!">
-          </button>
-          <button type="button">
-            <img src="img/emoji/angry.png" alt="Click Me!">
-          </button>
-          <button type="button">
-            <img src="img/emoji/sad.png" alt="Click Me!">
-          </button>
-          <button type="button">
-            <img src="img/emoji/neutral.png" alt="Click Me!">
-          </button>
-        </nav>
-      </div>
-    </div>
-  </div> -->
 
   <form oninput="body.setAttribute('data-light', slider.value)">
     <div class="icon sun">
