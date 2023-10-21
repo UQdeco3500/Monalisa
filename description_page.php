@@ -52,33 +52,88 @@
       <a class="main-pages" href="map.html">Map</a>
     </nav>
 
-  <div class="artwork-info">
-    <div class="artwork-image">
-      <img src="img/collection/pxArt.png" alt="Ghost Gully Evening">
+    <?php
+include 'db_connect.php';
+
+// Get the active slide index and description type from the URL parameter
+$activeSlide = isset($_GET['activeSlide']) ? intval($_GET['activeSlide']) : 0;
+$descriptionType = isset($_GET['description']) ? $_GET['description'] : 'happy';  // default to 'happy' if not provided
+
+// Validate and sanitize the description type
+$allowedDescriptions = ['happy', 'sad', 'neutral', 'angry'];
+if (!in_array($descriptionType, $allowedDescriptions)) {
+    $descriptionType = 'happy';  // default to 'happy' if invalid value provided
+}
+
+// Switch case is not required anymore since we've validated the input
+$descriptionColumn = "`" . ucfirst($descriptionType) . " Description`";
+
+// Fetch data for the specific artwork based on the active slide index
+$sql = "SELECT `Artwork Name`, `Image`, `Artist`, `Year`, $descriptionColumn AS `Description` FROM `monalisa` LIMIT $activeSlide, 1";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+?>
+    <div class="artwork-info">
+        <div class="artwork-image">
+            <img src="<?php echo $row['Image']; ?>" alt="<?php echo $row['Artwork Name']; ?>">
+        </div>
+        <div class="artwork-details">
+            <h2><?php echo $row['Artwork Name']; ?></h2>
+            <p class="artist-name"><?php echo $row['Artist']; ?></p>
+            <p class="creation-date">Date Created: <?php echo $row['Year']; ?></p>
+            <div class="description">
+                <p><?php echo $row['Description']; ?></p>
+            </div>
+        </div>
     </div>
-    <div class="artwork-details">
-      <h2><?php echo $artworkName; ?></h2>
-      <p class="artist-name">Artist: Henry Rielly</p>
-      <p class="creation-date">Date Created: 1894</p>
-      <div class="description">
-      <?php
-        include 'db_connection.php';
 
-        $artworkName = $_GET["artwork"];
-        $emotion = $_GET["emotion"];
+<?php
+} else {
+    echo "No results found";
+}
 
-        $column = ucfirst($emotion) . " Description"; // e.g., 'Happy Description'
+$conn->close();
+?>
 
-        $sql = "SELECT `$column` FROM monalisa WHERE `Artwork Name` = '$artworkName'";
-        $result = $conn->query($sql);
-        $row = $result->fetch_assoc();
+<!-- 
+    <?php
+include 'db_connect.php';
 
-        echo $row[$column];
-        ?>
+// Get the active slide index from the URL parameter
+$activeSlide = isset($_GET['activeSlide']) ? intval($_GET['activeSlide']) : 0;
 
-      </div>
+// Fetch data for the specific artwork based on the active slide index
+$sql = "SELECT `Artwork Name`, `Image`, `Artist`, `Year`, `Happy Description` FROM `monalisa` LIMIT $activeSlide, 1";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+?>
+    <div class="artwork-info">
+        <div class="artwork-image">
+            <img src="<?php echo $row['Image']; ?>" alt="<?php echo $row['Artwork Name']; ?>">
+        </div>
+        <div class="artwork-details">
+            <h2><?php echo $row['Artwork Name']; ?></h2>
+            <p class="artist-name"><?php echo $row['Artist']; ?></p>
+            <p class="creation-date">Date Created: <?php echo $row['Year']; ?></p>
+            <div class="description">
+                <p><?php echo $row['Happy Description']; ?></p>
+            </div>
+        </div>
     </div>
-  </div>
+
+<?php
+} else {
+    echo "No results found";
+}
+
+$conn->close();
+?> -->
+
+  
   <!-- <form oninput="body.setAttribute('data-light', slider.value)">
     <div class="icon sun">
       <div class="ray"></div>

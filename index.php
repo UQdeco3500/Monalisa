@@ -75,7 +75,30 @@
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-<!-- Swiper Initialization -->
+<?php
+} else {
+    echo "0 results";
+}
+$conn->close();
+?>
+
+<nav class="emoji-nav">
+  <button type="button" data-description="happy">
+    <img src="img/emoji/happy.png" alt="Click Me!">
+  </button>
+  <button type="button" data-description="angry">
+    <img src="img/emoji/angry.png" alt="Click Me!">
+  </button>
+  <button type="button" data-description="sad">
+    <img src="img/emoji/sad.png" alt="Click Me!">
+  </button>
+  <button type="button" data-description="neutral">
+    <img src="img/emoji/neutral.png" alt="Click Me!">
+  </button>
+</nav>
+
+
+    <!-- Swiper Initialization -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const mySwiper = new Swiper('.mySwiper', {
@@ -84,30 +107,20 @@ document.addEventListener("DOMContentLoaded", function() {
             prevEl: '.swiper-button-prev',
         },
     });
+
+    // Add event listeners to all emoji buttons
+    const emojiButtons = document.querySelectorAll('.emoji-nav button');
+    emojiButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Get the description type from the data attribute of the button
+            const descriptionType = button.getAttribute('data-description');
+            // Redirect to description_page.php with active slide index and description type as parameters
+            window.location.href = `description_page.php?activeSlide=${mySwiper.activeIndex}&description=${descriptionType}`;
+        });
+    });
 });
 </script>
 
-<?php
-} else {
-    echo "0 results";
-}
-$conn->close();
-?>
-
-    <nav class="emoji-nav">
-      <button type="button">
-        <img src="img/emoji/happy.png" alt="Click Me!">
-      </button>
-      <button type="button">
-        <img src="img/emoji/angry.png" alt="Click Me!">
-      </button>
-      <button type="button">
-        <img src="img/emoji/sad.png" alt="Click Me!">
-      </button>
-      <button type="button">
-        <img src="img/emoji/neutral.png" alt="Click Me!">
-      </button>
-    </nav>
 
     <form oninput="body.setAttribute('data-light', slider.value)">
         <div class="icon sun">
