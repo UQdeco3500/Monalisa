@@ -89,25 +89,23 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
 ?>
-    <div class="artwork-info">
-        <div class="emoji">
-            <img src="<?php echo $emojiImageUrl; ?>" alt="<?php echo $descriptionType; ?>">
-        </div>
-        <div class="artwork-image">
-            <img src="<?php echo $row['Image']; ?>" alt="<?php echo $row['Artwork Name']; ?>">
-        </div>
-        <div class="artwork-details">
-            <h2><?php echo $row['Artwork Name']; ?></h2>
-            <p class="artist-name"><?php echo $row['Artist']; ?></p>
-            <p class="creation-date">Date Created: <?php echo $row['Year']; ?></p>
-            <div class="description">
-                <p><?php echo $row['Description']; ?></p>
-            </div>
+
+<div class="artwork-info">
+    <div class="emoji">
+        <img src="<?php echo $emojiImageUrl; ?>" alt="<?php echo $descriptionType; ?>">
+    </div>
+    <div class="artwork-image">
+        <img src="<?php echo $row['Image']; ?>" alt="<?php echo $row['Artwork Name']; ?>">
+    </div>
+    <div class="artwork-details">
+        <h2><?php echo $row['Artwork Name']; ?></h2>
+        <p class="artist-name"><?php echo $row['Artist']; ?></p>
+        <p class="creation-date">Date Created: <?php echo $row['Year']; ?></p>
+        <div class="description">
+            <p><?php echo $row['Description']; ?></p>
         </div>
     </div>
-<?php
-}
-?>
+</div>
 
 
 <?php
