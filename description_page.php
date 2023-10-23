@@ -101,7 +101,7 @@ if ($result->num_rows > 0) {
             <p class="artist-name"><?php echo $row['Artist']; ?></p>
             <p class="creation-date">Date Created: <?php echo $row['Year']; ?></p>
             <div class="description">
-                <p>Description: <?php echo $row['Description']; ?></p>
+                <p><?php echo $row['Description']; ?></p>
             </div>
         </div>
     </div>
@@ -109,41 +109,6 @@ if ($result->num_rows > 0) {
 }
 ?>
 
-    <!-- <?php include 'db_connect.php';
-
-// Get the active slide index and description type from the URL parameter
-$activeSlide = isset($_GET['activeSlide']) ? intval($_GET['activeSlide']) : 0;
-$descriptionType = isset($_GET['description']) ? $_GET['description'] : 'happy';  // default to 'happy' if not provided
-
-// Validate and sanitize the description type
-$allowedDescriptions = ['happy', 'sad', 'neutral', 'angry'];
-if (!in_array($descriptionType, $allowedDescriptions)) {
-    $descriptionType = 'happy';  // default to 'happy' if invalid value provided
-}
-
-// Switch case is not required anymore since we've validated the input
-$descriptionColumn = "`" . ucfirst($descriptionType) . " Description`";
-
-// Fetch data for the specific artwork based on the active slide index
-$sql = "SELECT `Artwork Name`, `Image`, `Artist`, `Year`, $descriptionColumn AS `Description` FROM `monalisa` LIMIT $activeSlide, 1";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-?>
-    <div class="artwork-info">
-        <div class="artwork-image">
-            <img src="<?php echo $row['Image']; ?>" alt="<?php echo $row['Artwork Name']; ?>">
-        </div>
-        <div class="artwork-details">
-            <h2><?php echo $row['Artwork Name']; ?></h2>
-            <p class="artist-name"><?php echo $row['Artist']; ?></p>
-            <p class="creation-date">Date Created: <?php echo $row['Year']; ?></p>
-            <div class="description">
-                <p><?php echo $descriptionType; ?> Description: <?php echo $row['Description']; ?></p>
-            </div>
-        </div>
-    </div> -->
 
 <?php
 } else {
